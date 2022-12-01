@@ -1,6 +1,8 @@
 import React from 'react'
 import PostsAndFavs from '../components/PostsAndFavs'
 
+
+
 const Profile = () => {
   return (
     <div className='main'>

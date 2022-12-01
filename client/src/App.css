@@ -4,7 +4,10 @@
   margin: 0;
   padding: 0;
 }
-
+.icons:hover{
+  cursor: pointer;
+  color: red;
+}
 
 /* header */
 .header{
@@ -87,15 +90,30 @@ header{
   justify-content: flex-end;
 }
 .see_more{
+  background-color: transparent;
+  position: fixed;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: flex;
   justify-content: space-between;
+  
 }
 .Fa{
   width: 60px;
   height: 40px;
   color: blue;
 }
+.Fa:hover{
+  cursor: pointer;
+  color: red;
+}
+/* Post page  */
 
+.post_detail{
+  height: 150px;
+  background-color: antiquewhite;
+}
 /* profile page  */
 .main_profile_container{
   width: 100%;
@@ -104,6 +122,7 @@ header{
 }
 .main_profile{
   height: 40vh;
+  top: 80px;
   position: relative;
   background-color: green;
 }
@@ -130,7 +149,7 @@ header{
   right: 0;
 }
 .profile_space{
-  height: 120px;
+  height: 250px;
   background-color: red;
   /* padding: 20px; */
 }

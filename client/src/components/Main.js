@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaThumbsUp,FaHeart,FaGripHorizontal, FaPlus  } from "react-icons/fa";
+import { FaThumbsUp,FaHeart } from "react-icons/fa";
 
 
 const Main = () => {
@@ -41,10 +41,7 @@ const Main = () => {
         <button className='view-com'>view all comments</button>
         
       </main>
-      <div className='see_more'>
-      <FaGripHorizontal className='Fa'/>
-      <FaPlus className='Fa' />
-      </div>
+  
       
     </div>
   )
