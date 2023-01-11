@@ -9,16 +9,20 @@ const {
     getPost,
 } = require('../controllers/posts')
 
+
 // Route /api/v1/posts
 router.route('/')
     .get(getAllPosts)
     .post(createPost)
+  
 
 // Route /api/v1/posts/:id
 router.route('/:id')
     .get(getPost)
     .patch(updatePost)
     .delete(deletePost)
+
+
 
     
 

@@ -13,9 +13,9 @@ const PostSchema = new mongoose.Schema({
     //     type: String,
     //     require: true,
     //   },
-    //   likes: {
-    //     type: Number,
-    //   },
+      likes: {
+        type: Number,
+      },
     //   saved: {
     //     type: Number,
     //   },

@@ -1,4 +1,5 @@
 const Post = require("../models/Post")
+// const Comment = require("../models/Comment")
 
 
 const createPost = async(req, res) => {
@@ -13,10 +14,11 @@ const createPost = async(req, res) => {
 
 const getAllPosts = async (req, res)=> {
     try {
-     const posts = await Post.find({})
+     const posts = await Post.find({}).sort({ createdAt: "desc" }).lean();
+    //  const comments = await Comment.find({posts: req.params.id}).sort({ createdAt: 'desc' }).lean()
      res.json({posts})
     } catch (error) {
-        res.status(404).json({msg: 'posts not found'})
+        res.status(404).json({msg: 'posts/ comments not found'})
     }
 }
 
@@ -24,6 +26,7 @@ const getPost = async(req, res) => {
    try {
    const {id: postID} = req.params 
    const post = await Post.findOne({_id:postID})
+//    const comment = await Comments.findOne({_id:postID})
    res.json({post})
    } catch (error) {
     console.log(error);
