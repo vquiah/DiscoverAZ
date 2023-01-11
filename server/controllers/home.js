@@ -1,6 +1,8 @@
-module.exports = {
-    getHomePage: (req, res) => {
-      res.json({message: "home!"});
-    },
-  };
+// const getHomePage = async(req, res)=>{
+//   res.json({msg:'hello world'})
+// }
+
+// module.exports = {
+//   getHomePage
+//   };
   
