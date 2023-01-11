@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 // import { FaSistrix } from "react-icons/fa";
 // import avatar from './avatar.png'
 
@@ -6,9 +6,10 @@ const Header = () => {
   return (
     <div className='header'>
       <header>
-        <span className='logo'>DisAZ</span>
+        <Link to='/'> DisAZ </Link>
         <input className='input-search'type='text'placeholder= "Search..." />
-        <img src='#' alt='avater' className='avatar'/>
+        <Link to='/profile'> <img src='#' alt='avater' className='avatar'/> </Link>
+       
       </header>
     </div>
   )
