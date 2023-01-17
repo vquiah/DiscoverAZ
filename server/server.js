@@ -15,8 +15,6 @@ const rateLimiter = require('express-rate-limit');
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
-
-
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 
@@ -51,21 +49,13 @@ app.use(errorHandlerMiddleware);
 
 
 // ========================== Routes =================================
-// const home = require('./routes/home')
+
+const authRouter = require('./routes/auth');
 const posts = require('./routes/posts')
 const comments = require('./routes/comments')
 
- 
-
-
 //Routes
-const authRouter = require('./routes/auth');
 app.use('/api/v1/auth', authRouter);
-
-
-// app.use('/api/v1/jobs', authenticateUser, jobsRouter);
-
-// app.use('/api/v1', home)
 app.use('/api/v1/posts', posts)
 app.use('/api/v1/comment', comments)
 

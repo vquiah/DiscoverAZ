@@ -25,6 +25,14 @@ const UserSchema = new mongoose.Schema({
    required: [true, 'Please provide password'],
    minlength: 5,
   },
+  image: {
+    type: String,
+    require: true,
+  },
+  cloudinaryId: {
+    type: String,
+    require: true,
+  }
 });
 
 // Password hash middleware.

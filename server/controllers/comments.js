@@ -1,5 +1,6 @@
 const Comment = require('../models/comment')
 
+// ===============================Logic====================================== 
 const getAllComments = async (req, res)=> {
   try {
    const comments = await Comment.find({}).sort({ createdAt: "desc" }).lean();
@@ -8,15 +9,13 @@ const getAllComments = async (req, res)=> {
       res.status(404).json({msg: 'comments not found'})
   }
 }
-
-
 const createComment = async(req, res) => {
     try {
       const comment = await Comment.create({
         comment: req.body.comment,
         likes: 0, 
         post: req.params.id 
-      })
+      }).lean()
         console.log('Comment added')
         res.json({comment})
       } catch (err) {

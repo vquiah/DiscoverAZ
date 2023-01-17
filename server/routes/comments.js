@@ -5,7 +5,7 @@ const {
     getAllComments,
     createComment,
     deleteComment,
-  
+    //TODO: likeComment
 } = require('../controllers/comments')
 
 // Route /api/v1/comment/
