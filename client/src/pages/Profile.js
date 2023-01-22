@@ -1,5 +1,5 @@
 import React from 'react'
-import PostsAndFavs from '../components/PostsAndFavs'
+import {PostsAndFavs} from '../components/index'
 
 
 

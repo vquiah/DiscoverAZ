@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import MyPosts from '../components/MyPosts'
+import MyPosts from './MyPosts'
 import MyFavs from '../components/MyFavs'
 
 const PostsAndFavs = () => {

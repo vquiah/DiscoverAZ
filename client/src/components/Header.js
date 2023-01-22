@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='header'>
       <header>
-        <Link to='/'> DisAZ </Link>
+        <Link to='/posts'> DisAZ </Link>
         <input className='input-search'type='text'placeholder= "Search..." />
         <Link to='/profile'> <img src='#' alt='avater' className='avatar'/> </Link>
        
